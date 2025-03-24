@@ -159,8 +159,7 @@
         - workingDirs:
             - "./compilers/projection/src/py_inext/application_db"
           pipRequirementsFile: "./compilers/projection/src/py_inext/application_db/requirements.txt"
-      # [Default: ["*.git*", "*node_modules*", "*target*", "*venv*", "*test*"]]
-      # List of exclusion patterns (utilizing wildcards) for excluding paths in the source code of the Git repository during SCA scans.
+      # Add all working directory paths under pathExclusions
       pathExclusions:
         - "application_tests"
         - "applications"
@@ -178,23 +177,44 @@
         - "syntacore"
         - "test_assets"
         - "tools"
-      # [Mandatory for pip only if using requirements file, Default: pip install .]
-      # The requirements file name that is used to install dependencies in case of pip package manager
-      # pipRequirementsFile:
-      #  - "./requirements.txt"
-      #  - "./scripts/optimizer/requirements.txt"
-      # [Default: true]
-      # Use Gradle Wrapper (gradlew/gradlew.bat) to run Gradle
-      #   useWrapper: true
-      # [Optional]
-      # Name of a Virtual Repository in Artifactory to resolve (download) the project dependencies from
-      #   repository: ""
+        - "./nxt009_runtime/tools/nxt009_hw_features"
+        - "./nxt009_runtime/tools/nxt009_nfi_bp_viz"
+        - "./nxt009_runtime/tools/nxt009_perftoolbox"
+        - "./nxt009_runtime/tools/nxt009_telem_analyzer"
+        - "./nxt009_runtime/ci/emulation/Shadows_sync"
+        - "./nxt009_runtime/nxt009_hwsim"
+        - "./nxt009_device_adapter/zephyr_workspace/zephyr/scripts/dts/python-devicetree"
+        - "./nxt009_device_adapter/zephyr_workspace/zephyr/scripts"
+        - "./tools/testing"
+        - "./handoff_tests"
+        - "./scripts/optimizer"
+        - "./packages"
+        - "./applications/automatic_runs/Veloce"
+        - "./applications/nextrunner"
+        - "./applications/nextrunner/applications/microbenchmarks"
+        - "./applications/nextrunner/modules/postproc"
+        - "./applications"
+        - "./applications/qa_automation_tests"
+        - "./applications/application_db"
+        - "./nxt009-soc-sw/tests"
+        - "./nxt009-soc-sw/release"
+        - "./nxt009-soc-sw/bootrom/tests"
+        - "./nxt009-soc-sw/scripts"
+        - "./deps/ctcache"
+        - "./telemetry/nxt009_telem_parser/test"
+        - "./compilers/optimizer/tools/infer_telemetry"
+        - "./compilers/mlir"
+        - "./compilers/mlir/mlir-docs-website"
+        - "./compilers/proj_adapter"
+        - "./compilers/projection"
+        - "./compilers/projection/src/thread_simulator"
+        - "./compilers/projection/src/py_inext/application_db"
     # JFrog Platform parameters
     jfrogPlatform:
-    # [Optional]
-    # JFrog project key. Learn more about it [here](https://www.jfrog.com/confluence/display/JFROG/Projects)
-    # jfrogProjectKey: ""
-    # [Optional]
-    # Xray Watches. Learn more about it [here](https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray+Watches)
-    # watches:
-    #   - "ns_watch"
+      # [Optional]
+      # JFrog project key. Learn more about it [here](https://www.jfrog.com/confluence/display/JFROG/Projects)
+      # jfrogProjectKey: ""
+      # [Optional]
+      # Xray Watches. Learn more about it [here](https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray+Watches)
+      # watches:
+      #   - "ns_watch"
