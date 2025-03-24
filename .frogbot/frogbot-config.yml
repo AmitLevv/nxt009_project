@@ -56,7 +56,7 @@
       # - user@company.com
       # List of subprojects / project dirs inside the Git repository
       projects:
-      - workingDirs:
+        - workingDirs:
             - "."
           pipRequirementsFile: "./requirements.txt"
        
