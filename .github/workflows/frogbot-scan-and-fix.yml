@@ -24,8 +24,6 @@ permissions:
 jobs:
   create-fix-pull-requests:
     runs-on: ubuntu-latest
-    container:
-      image: python:3.10  # Use an official Python image with distutils available
     steps:
       - uses: actions/checkout@v4
       
