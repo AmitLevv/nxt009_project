@@ -27,8 +27,8 @@ jobs:
       - name: Install Python dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3-distutils
-          python3 -m pip install --upgrade pip setuptools
+          sudo apt-get install -y python-distutils
+          python -m pip install --upgrade pip setuptools
 
 
       - uses: jfrog/frogbot@5d9c42c30f1169d8be4ba5510b40e75ffcbbc2a9  # v2.21.2
