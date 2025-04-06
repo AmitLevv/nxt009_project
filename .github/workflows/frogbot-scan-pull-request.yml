@@ -35,6 +35,8 @@ jobs:
           # [Mandatory]
           # The GitHub token is automatically generated for the job
           JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JFROG_CLI_LOG_LEVEL: DEBUG
+          JF_DISABLE_ADVANCED_SECURITY: true
 
           # [Optional, default: https://api.github.com]
           # API endpoint to GitHub
