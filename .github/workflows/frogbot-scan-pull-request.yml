@@ -40,8 +40,7 @@ jobs:
 
           # [Optional, default: https://api.github.com]
           # API endpoint to GitHub
-          # JF_GIT_API_ENDPOINT: https://github.example.com
-OA
+          # JF_GIT_API_ENDPOINT: https://github.example.comOA
           # [Optional]
           # By default, the Frogbot workflows download the Frogbot executable as well as other tools
           # needed from https://releases.jfrog.io
